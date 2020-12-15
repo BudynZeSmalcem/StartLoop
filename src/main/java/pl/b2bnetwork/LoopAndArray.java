@@ -3,7 +3,6 @@ package pl.b2bnetwork;
 import java.util.List;
 
 public class LoopAndArray {
-    private int name;
 
     public LoopAndArray() {
     }
@@ -20,8 +19,13 @@ public class LoopAndArray {
 
     // wyszukaj największą wartość w liscie
     public int highestFromList(final List<Integer> list) {
-
-        return 0;
+        int result = 0;
+        for (Integer integer : list) {
+            if (result < integer) {
+                result = integer;
+            }
+        }
+        return result;
     }
 
     // oblicz średnią wartość listy
