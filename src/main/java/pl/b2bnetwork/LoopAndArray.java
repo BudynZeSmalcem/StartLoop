@@ -20,8 +20,13 @@ public class LoopAndArray {
 
     // wyszukaj największą wartość w liscie
     public int highestFromList(final List<Integer> list) {
-
-        return 0;
+        int result = 0;
+        for (Integer integer : list) {
+            if (result < integer) {
+                result = integer;
+            }
+        }
+        return result;
     }
 
     // oblicz średnią wartość listy
@@ -29,3 +34,4 @@ public class LoopAndArray {
         return 0;
     }
 }
+
